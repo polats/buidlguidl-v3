@@ -87,19 +87,18 @@ export default function Index({ bgStats }) {
   return (
     <>
       <MetaSeo
-        title="BuidlGuidl v3"
-        description="A curated group of Ethereum builders creating products, prototypes, and tutorials to enrich the web3 ecosytem."
+        title="New Players Cooperative"
+        description="A curated group of builders creating products, prototypes, and tutorials using ERC-6551 and AI to enrich the web3 ecosytem."
         image="/assets/bg_teaser.png"
       />
       <Flex bgColor={heroBg} alignItems="center" direction={{ base: "column-reverse", lg: "row" }}>
         <Box w={{ base: "100%", lg: "50%" }} pl={{ base: "50px", lg: "15%" }} pr="50px" py="50px">
           <Box maxW="500px" margin={{ base: "auto", lg: "0" }} textAlign={{ base: "center", lg: "left" }}>
             <Heading as="h1" mb="10px">
-              BuidlGuidl <chakra.span color="#CBD5E0">v3</chakra.span>
+              New Players Cooperative
             </Heading>
             <Text mb="25px" maxW="470px">
-              A curated group of <strong>Ethereum</strong> builders creating products, prototypes, and tutorials to
-              enrich the web3 ecosystem.
+            A curated group of <strong>Ethereum</strong> builders creating products, prototypes, and tutorials using ERC-6551 and AI to enrich the web3 ecosytem.
             </Text>
             <Text mb="10px">❤️ We are an Ethereum public good.</Text>
             {/*Builds / Builders / ETH distributed Ξ*/}
