@@ -15,8 +15,8 @@ if (process.env.FIRESTORE_EMULATOR_HOST) {
   console.log("using Firebase **emulator** DB");
 
   firebaseAdmin.initializeApp({
-    projectId: "buidlguidl-v3",
-    storageBucket: "buidlguidl-v3.appspot.com",
+    projectId: "new-players-cooperative",
+    storageBucket: "new-players-cooperative.appspot.com",
   });
 
   importSeed(firebaseAdmin.firestore());
@@ -24,11 +24,11 @@ if (process.env.FIRESTORE_EMULATOR_HOST) {
   console.log("using Firebase live DB");
   firebaseAdmin.initializeApp({
     credential: firebaseAdmin.credential.applicationDefault(),
-    storageBucket: "buidlguidl-v3.appspot.com",
+    storageBucket: "new-players-cooperative.appspot.com",
   });
 } else {
   firebaseAdmin.initializeApp({
-    storageBucket: "buidlguidl-v3.appspot.com",
+    storageBucket: "new-players-cooperative.appspot.com",
   });
 }
 
