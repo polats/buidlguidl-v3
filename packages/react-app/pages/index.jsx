@@ -102,6 +102,7 @@ export default function Index({ bgStats }) {
             </Text>
             <Text mb="10px">❤️ We are an Ethereum public good.</Text>
             {/*Builds / Builders / ETH distributed Ξ*/}
+            {/*
             <Box d="inline-block">
               <HStack mt="50px" justifyContent={{ base: "center", lg: "initial" }}>
                 <LinkBox>
@@ -134,6 +135,7 @@ export default function Index({ bgStats }) {
                 </Text>
               </HStack>
             </Box>
+            */}
           </Box>
         </Box>
 
@@ -327,6 +329,7 @@ export default function Index({ bgStats }) {
     </>
   );
 }
+/*
 
 export async function getStaticProps() {
   const builders = await getAllBuilders();
@@ -360,3 +363,4 @@ export async function getStaticProps() {
     revalidate: 21600,
   };
 }
+*/
