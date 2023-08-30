@@ -102,7 +102,7 @@ export default function Index({ bgStats }) {
             </Text>
             <Text mb="10px">👉  
             <Link
-                  href="https://www.icloud.com/keynote/078Qxzw26PtMdQoRwIM17k3CQ#The_New_Players"
+                  href="https://drive.google.com/file/d/1AlIeO6PrUPa2orDKpQlO4edmWl6l_nVV/view?usp=sharing"
                   fontWeight="700"
                   color="teal.500"
                   isExternal
