@@ -88,7 +88,7 @@ export default function Index({ bgStats }) {
     <>
       <MetaSeo
         title="New Players Cooperative"
-        description="A curated group of builders creating products, prototypes, and tutorials using ERC-6551 and AI to enrich the web3 ecosytem."
+        description="A group of builders, artists and dreamers using ERC-6551 and AI to enrich the web3 ecosytem."
         image="/assets/bg_teaser.png"
       />
       <Flex bgColor={heroBg} alignItems="center" direction={{ base: "column-reverse", lg: "row" }}>
@@ -98,9 +98,19 @@ export default function Index({ bgStats }) {
               New Players Cooperative
             </Heading>
             <Text mb="25px" maxW="470px">
-            A curated group of <strong>Ethereum</strong> builders creating products, prototypes, and tutorials using ERC-6551 and AI to enrich the web3 ecosytem.
+            A group of builders, artists and dreamers using <strong>ERC-6551 and AI</strong> to enrich the web3 ecosytem.
             </Text>
-            <Text mb="10px">❤️ We are an Ethereum public good.</Text>
+            <Text mb="10px">👉  
+            <Link
+                  href="https://www.icloud.com/keynote/078Qxzw26PtMdQoRwIM17k3CQ#The_New_Players"
+                  fontWeight="700"
+                  color="teal.500"
+                  isExternal
+                >
+                  Check out 🔎The New Players Brief
+                </Link>{" "}
+                👈
+            </Text>
             {/*Builds / Builders / ETH distributed Ξ*/}
             {/*
             <Box d="inline-block">
@@ -329,8 +339,8 @@ export default function Index({ bgStats }) {
     </>
   );
 }
-/*
 
+/*
 export async function getStaticProps() {
   const builders = await getAllBuilders();
   const builds = await getAllBuilds();
