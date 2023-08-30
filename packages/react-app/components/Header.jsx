@@ -151,6 +151,16 @@ export default function Header({
               Builders
             </NextLink>
           </chakra.li>
+          <chakra.li key="/roadmap" color={secondaryFontColor} _hover={{ color: primaryColorString }}>
+            <NextLink
+              href="/roadmap"
+              activeStyle={{
+                color: primaryColorString,
+              }}
+            >
+              Roadmap
+            </NextLink>
+          </chakra.li>
           <chakra.li key="/faq" color={secondaryFontColor} _hover={{ color: primaryColorString }}>
             <a
               href="https://mirror.xyz/news.buidlguidl.eth/O_Gc84QO4TjvxJnunkRr-s-It1qBTK7TMlJcWf4FQ_I"
