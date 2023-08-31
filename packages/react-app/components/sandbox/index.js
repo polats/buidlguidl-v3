@@ -1,5 +1,5 @@
 import cn from 'clsx';
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import ReactFlow, {
   MiniMap,
   Controls,
@@ -13,10 +13,16 @@ import ReactFlow, {
 import StackNode from './StackNode';
 import 'reactflow/dist/style.css';
 import styles from './style.module.css'
+import dynamic from "next/dynamic";
 
 const nodeTypes = {
   stack: StackNode
 }
+
+const ReactJson = dynamic(
+  () => import('react-json-view'),
+  { ssr: false}
+)
 
 const nodeDefaults = {
   sourcePosition: Position.Bottom,
@@ -107,9 +113,21 @@ export function GameWindow({
 export function Gameboard() {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const [rfInstance, setRfInstance] = useState(null);
 
   const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [setEdges]);
   const proOptions = { hideAttribution: true };
+
+  const updateReactFlow = async (e) => {
+    // const address = e.updated_src.address;
+    // const tokenid = e.updated_src.tokenid;
+    // const client = getViemClient("goerli");
+    // const tokenboundAddress = await getAccount(
+    //   address, tokenid, client);
+    
+    // setTokenboundAddress(tokenboundAddress);
+    console.log(rfInstance)
+  }
 
   return (
     <GameWindow
@@ -120,12 +138,17 @@ export function Gameboard() {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
+        onInit={setRfInstance}
         nodeTypes={nodeTypes}
         proOptions={proOptions}
       >
         <MiniMap position={"bottom-left"} zoomable pannable/>
         <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
       </ReactFlow>
+
+      <ReactJson src={nodes} theme="hopscotch" onEdit={updateReactFlow} enableClipboard={true}/>
+
+
     </GameWindow>
   );
 }
