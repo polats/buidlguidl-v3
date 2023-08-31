@@ -98,7 +98,7 @@ export default function Index({ bgStats }) {
               New Players Cooperative
             </Heading>
             <Text mb="25px" maxW="470px">
-            A group of builders, artists and dreamers using <strong>ERC-6551 and AI</strong> to enrich the web3 ecosytem.
+            A group of builders, artists and dreamers using <strong>ERC-6551 and AI</strong>. Our mission is to build a better world with the new players in the game of life.
             </Text>
             <Text mb="10px">👉  
             <Link
@@ -107,7 +107,7 @@ export default function Index({ bgStats }) {
                   color="teal.500"
                   isExternal
                 >
-                  Check out 🔎The New Players Brief
+                  🔎The New Players Brief
                 </Link>{" "}
                 👈
             </Text>
